@@ -1,0 +1,20 @@
+<div class="container mt-5">
+  <div *ngIf="!isRegistermode" style="text-align : center">
+    <h1>Find your match</h1>
+    <p class="lead">Come on in to view your matches... All you need to do is sign up!</p>  
+    <div class="text-center">
+      <button class="btn btn-primary mr-sm-2" (click)="openRegister()"> Register </button>
+      <button class="btn btn-info mr-sm-2"> Learn More </button>  
+    </div>
+</div>
+
+<div *ngIf="isRegistermode" class="container">
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <app-register (cancelChanges)="onCancelChange($event)"></app-register>
+    </div>
+  </div>
+
+</div>
+
+</div>
